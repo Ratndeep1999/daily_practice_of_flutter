@@ -1,6 +1,7 @@
+import 'package:daily_practice/details_screen.dart';
+import 'package:daily_practice/list_screen.dart';
+import 'package:daily_practice/routes.dart';
 import 'package:flutter/material.dart';
-
-import 'list_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -14,7 +15,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData.light(),
-      home: ListScreen(),
+      // home: ListScreen(),
+      initialRoute: kListPage,
+      routes: {
+        kListPage : (context) => ListScreen(),
+        kDetailsPage : (context) => DetailsScreen()
+      },
     );
   }
 }
