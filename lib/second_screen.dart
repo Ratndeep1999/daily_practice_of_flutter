@@ -9,8 +9,47 @@ class SecondScreen extends StatefulWidget {
 }
 
 class _SecondScreenState extends State<SecondScreen> {
+
+  @override
+  void initState() {
+    super.initState();
+    debugPrint('initState method...');
+  }
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    debugPrint('did_change_dependencies method...');
+  }
+
+  @override
+  void didUpdateWidget(covariant SecondScreen oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    debugPrint('did_update_widget method...');
+  }
+
+  @override
+  void setState(VoidCallback fn) {
+    super.setState(fn);
+    debugPrint('set_state method...');
+  }
+
+  @override
+  void deactivate() {
+    super.deactivate();
+    debugPrint('deactivate method...');
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    debugPrint('dispose method...');
+  }
+
   @override
   Widget build(BuildContext context) {
+    debugPrint('Build method...');
+
     return Scaffold(
       body: SafeArea(
         child: Center(
