@@ -55,9 +55,9 @@ class _ThirdScreenState extends State<ThirdScreen> {
 
   // method to create random color
   Color _randomColor() {
-    debugPrint(Random().nextInt(50).toString());
+    // debugPrint(Random().nextInt(50).toString());
     Color randomColor = Color(Random().nextInt(0xFF000000));
-    debugPrint(randomColor.toString());
+    // debugPrint(randomColor.toString());
     return randomColor;
   }
 }
