@@ -13,42 +13,42 @@ class _SecondScreenState extends State<SecondScreen> {
   @override
   void initState() {
     super.initState();
-    debugPrint('initState method...');
+    debugPrint('2nd initState method...');
   }
 
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
-    debugPrint('did_change_dependencies method...');
+    debugPrint('2nd did_change_dependencies method...');
   }
 
   @override
   void didUpdateWidget(covariant SecondScreen oldWidget) {
     super.didUpdateWidget(oldWidget);
-    debugPrint('did_update_widget method...');
+    debugPrint('2nd did_update_widget method...');
   }
 
   @override
   void setState(VoidCallback fn) {
     super.setState(fn);
-    debugPrint('set_state method...');
+    debugPrint('2nd set_state method...');
   }
 
   @override
   void deactivate() {
     super.deactivate();
-    debugPrint('deactivate method...');
+    debugPrint('2nd deactivate method...');
   }
 
   @override
   void dispose() {
     super.dispose();
-    debugPrint('dispose method...');
+    debugPrint('2nd dispose method...');
   }
 
   @override
   Widget build(BuildContext context) {
-    debugPrint('Build method...');
+    debugPrint('2nd Build method...');
 
     return Scaffold(
       body: SafeArea(
