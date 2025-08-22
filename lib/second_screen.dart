@@ -107,7 +107,7 @@ class _SecondScreenState extends State<SecondScreen> {
               SizedBox(height: 10),
 
               // set_state call
-              TextButton(
+              ElevatedButton(
                 onPressed: () {
                   setState(() {});
                 },
