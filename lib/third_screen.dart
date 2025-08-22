@@ -12,7 +12,6 @@ class ThirdScreen extends StatefulWidget {
 }
 
 class _ThirdScreenState extends State<ThirdScreen> {
-
   int updatedCount = 0;
 
   @override
