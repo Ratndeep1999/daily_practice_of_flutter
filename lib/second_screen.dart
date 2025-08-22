@@ -93,12 +93,26 @@ class _SecondScreenState extends State<SecondScreen> {
 
               SizedBox(height: 10),
 
+              // push_replacement
               TextButton(
                 onPressed: () {
                   Navigator.of(context).pushReplacementNamed(kThirdScreen);
                 },
                 child: Text(
                   'Relace to >> 3rd Screen',
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+                ),
+              ),
+
+              SizedBox(height: 10),
+
+              // set_state call
+              TextButton(
+                onPressed: () {
+                  setState(() {});
+                },
+                child: Text(
+                  'set_state',
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
                 ),
               ),
