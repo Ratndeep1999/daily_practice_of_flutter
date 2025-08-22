@@ -1,3 +1,4 @@
+import 'dart:math';
 import 'package:daily_practice/routes/named_routes.dart';
 import 'package:flutter/material.dart';
 
@@ -63,7 +64,9 @@ class _SecondScreenState extends State<SecondScreen> {
               // push
               IconButton(
                 onPressed: () {
-                  Navigator.of(context).pushNamed(kThirdScreen);
+                  Navigator.of(
+                    context,
+                  ).pushNamed(kThirdScreen, arguments: Random().nextInt(100));
                 },
                 highlightColor: Colors.transparent,
                 splashRadius: 0.50,
