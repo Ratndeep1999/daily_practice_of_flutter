@@ -40,10 +40,7 @@ class _ThirdScreenState extends State<ThirdScreen> {
                   itemBuilder: (BuildContext context, int index) {
                     return SizedBox(
                       height: 50,
-                      width: MediaQuery
-                          .of(context)
-                          .size
-                          .width,
+                      width: MediaQuery.of(context).size.width,
                       child: DecoratedBox(
                         decoration: BoxDecoration(
                           border: Border.all(color: Colors.white),
@@ -72,7 +69,9 @@ class _ThirdScreenState extends State<ThirdScreen> {
 
   // method to create random color
   Color _randomColor() {
-    Color randomColor = Color(Random().nextInt(0xffffff));
+    debugPrint(Random().nextInt(50).toString());
+    Color randomColor = Color(Random().nextInt(0xFF000000));
+    debugPrint(randomColor.toString());
     return randomColor;
   }
 }
