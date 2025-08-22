@@ -18,9 +18,12 @@ class MyApp extends StatelessWidget {
       theme: ThemeData.light(),
       initialRoute: kFirstScreen,
       routes: {
-        kFirstScreen : (context) => FirstScreen(),
-        kSecondScreen : (context) => SecondScreen(),
-        kThirdScreen : (context) => ThirdScreen(),
+        kFirstScreen: (context) => FirstScreen(),
+        kSecondScreen: (context) => SecondScreen(),
+        kThirdScreen:
+            (context) => ThirdScreen(
+              randomIndex: ModalRoute.of(context)?.settings.arguments as int,
+            ),
       },
     );
   }
