@@ -13,42 +13,42 @@ class _FirstScreenState extends State<FirstScreen> {
   @override
   void initState() {
     super.initState();
-    debugPrint('initState method...');
+    debugPrint('1st initState method...');
   }
 
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
-    debugPrint('did_change_dependencies method...');
+    debugPrint('1st did_change_dependencies method...');
   }
 
   @override
   void didUpdateWidget(covariant FirstScreen oldWidget) {
     super.didUpdateWidget(oldWidget);
-    debugPrint('did_update_widget method...');
+    debugPrint('1st did_update_widget method...');
   }
 
   @override
   void setState(VoidCallback fn) {
     super.setState(fn);
-    debugPrint('set_state method...');
+    debugPrint('1st set_state method...');
   }
 
   @override
   void deactivate() {
     super.deactivate();
-    debugPrint('deactivate method...');
+    debugPrint('1st deactivate method...');
   }
 
   @override
   void dispose() {
     super.dispose();
-    debugPrint('dispose method...');
+    debugPrint('1st dispose method...');
   }
 
   @override
   Widget build(BuildContext context) {
-    debugPrint('Build method...');
+    debugPrint('1st Build method...');
 
     return Scaffold(
       body: SafeArea(
