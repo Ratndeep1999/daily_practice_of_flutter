@@ -14,42 +14,42 @@ class _ThirdScreenState extends State<ThirdScreen> {
   @override
   void initState() {
     super.initState();
-    debugPrint('initState method...');
+    debugPrint('3rd initState method...');
   }
 
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
-    debugPrint('did_change_dependencies method...');
+    debugPrint('3rd did_change_dependencies method...');
   }
 
   @override
   void didUpdateWidget(covariant ThirdScreen oldWidget) {
     super.didUpdateWidget(oldWidget);
-    debugPrint('did_update_widget method...');
+    debugPrint('3rd did_update_widget method...');
   }
 
   @override
   void setState(VoidCallback fn) {
     super.setState(fn);
-    debugPrint('set_state method...');
+    debugPrint('3rd set_state method...');
   }
 
   @override
   void deactivate() {
     super.deactivate();
-    debugPrint('deactivate method...');
+    debugPrint('3rd deactivate method...');
   }
 
   @override
   void dispose() {
     super.dispose();
-    debugPrint('dispose method...');
+    debugPrint('3rd dispose method...');
   }
 
   @override
   Widget build(BuildContext context) {
-    debugPrint('Build method...');
+    debugPrint('3rd Build method...');
 
     return Scaffold(
       body: SafeArea(
