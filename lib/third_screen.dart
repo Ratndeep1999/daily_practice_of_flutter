@@ -3,7 +3,9 @@ import 'package:daily_practice/random_color_items.dart';
 import 'package:flutter/material.dart';
 
 class ThirdScreen extends StatefulWidget {
-  const ThirdScreen({super.key});
+  const ThirdScreen({super.key, required this.randomIndex});
+
+  final int randomIndex;
 
   @override
   State<ThirdScreen> createState() => _ThirdScreenState();
@@ -11,10 +13,13 @@ class ThirdScreen extends StatefulWidget {
 
 class _ThirdScreenState extends State<ThirdScreen> {
 
+  final int updatedCount = 0;
+
   @override
   void initState() {
     super.initState();
     debugPrint('3rd initState method...');
+    debugPrint(widget.randomIndex.toString());
   }
 
   @override
@@ -76,7 +81,7 @@ class _ThirdScreenState extends State<ThirdScreen> {
               SizedBox(height: 20),
               Expanded(
                 child: ListView.builder(
-                  itemCount: 50,
+                  itemCount: updatedCount,
                   itemBuilder: (BuildContext context, int index) {
                     return RandomColorItems(
                       randomColor: _randomColor(),
