@@ -99,7 +99,10 @@ class _SecondScreenState extends State<SecondScreen> {
               // push_replacement
               TextButton(
                 onPressed: () {
-                  Navigator.of(context).pushReplacementNamed(kThirdScreen);
+                  Navigator.of(context).pushReplacementNamed(
+                    kThirdScreen,
+                    arguments: Random().nextInt(100),
+                  );
                 },
                 child: Text(
                   'Relace to >> 3rd Screen',
