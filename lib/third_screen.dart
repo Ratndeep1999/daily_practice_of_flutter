@@ -13,13 +13,18 @@ class ThirdScreen extends StatefulWidget {
 
 class _ThirdScreenState extends State<ThirdScreen> {
 
-  final int updatedCount = 0;
+  int updatedCount = 0;
 
   @override
   void initState() {
     super.initState();
     debugPrint('3rd initState method...');
     debugPrint(widget.randomIndex.toString());
+    if (widget.randomIndex < 30) {
+      updatedCount = 40 ;
+    } else {
+      updatedCount =widget.randomIndex;
+    }
   }
 
   @override
