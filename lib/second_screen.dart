@@ -9,7 +9,6 @@ class SecondScreen extends StatefulWidget {
 }
 
 class _SecondScreenState extends State<SecondScreen> {
-
   @override
   void initState() {
     super.initState();
@@ -60,8 +59,8 @@ class _SecondScreenState extends State<SecondScreen> {
                 'Second Screen',
                 style: TextStyle(fontSize: 30, fontWeight: FontWeight.w500),
               ),
-              SizedBox(height: 20,),
-              // push 
+              SizedBox(height: 20),
+              // push
               IconButton(
                 onPressed: () {
                   Navigator.of(context).pushNamed(kThirdScreen);
@@ -74,7 +73,7 @@ class _SecondScreenState extends State<SecondScreen> {
                   color: Colors.black45,
                 ),
               ),
-              SizedBox(height: 5,),
+              SizedBox(height: 5),
               // pop
               RotatedBox(
                 quarterTurns: 2,
@@ -89,6 +88,18 @@ class _SecondScreenState extends State<SecondScreen> {
                     size: 80,
                     color: Colors.black45,
                   ),
+                ),
+              ),
+
+              SizedBox(height: 10),
+
+              TextButton(
+                onPressed: () {
+                  Navigator.of(context).pushReplacementNamed(kThirdScreen);
+                },
+                child: Text(
+                  'Relace to >> 3rd Screen',
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
                 ),
               ),
             ],
