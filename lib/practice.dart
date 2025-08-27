@@ -44,6 +44,11 @@ class _PracticeState extends State<Practice> {
               },
               child: Text('Click'),
             ),
+
+            SizedBox(height: 50,),
+            Image.network(
+              'https://wallpaperaccess.com/full/150575.jpg',
+            ),
           ],
         ),
       ),
