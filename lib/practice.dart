@@ -8,6 +8,7 @@ class Practice extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Center(
               child: Image.asset(
@@ -18,6 +19,10 @@ class Practice extends StatelessWidget {
                 fit: BoxFit.cover,
               ),
             ),
+
+            SizedBox(height: 50,),
+            
+            ElevatedButton(onPressed: (){}, child: Text('Click'))
           ],
         ),
       ),
