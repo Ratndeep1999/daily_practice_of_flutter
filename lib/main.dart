@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
       //         randomIndex: ModalRoute.of(context)?.settings.arguments as int,
       //       ),
       // },
-      home: Practice(),
+      home: ImageVisibility(),
     );
   }
 }
