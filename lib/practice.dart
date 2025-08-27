@@ -45,11 +45,12 @@ class _PracticeState extends State<Practice> {
               child: Text('Click'),
             ),
 
-            SizedBox(height: 50,),
+            SizedBox(height: 50),
             Image.network(
+              'https://wallpaperaccess.com/full/395413.jpg',
               height: 200,
               width: 350,
-              'https://wallpaperaccess.com/full/395413.jpg',
+              semanticLabel: 'Thailand',
               loadingBuilder: (context, child, progress) {
                 return progress == null ? child : LinearProgressIndicator();
               },
