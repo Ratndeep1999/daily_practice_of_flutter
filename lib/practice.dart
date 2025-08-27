@@ -8,7 +8,7 @@ class Practice extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
           child: Center(
-            child: Image.asset('demo.webp'),
+            child: Image.asset('assets/images/demo.webp', ),
           ),
       ),
     );
