@@ -21,10 +21,15 @@ class _PracticeState extends State<Practice> {
               child: Visibility(
                 visible: isVisible,
                 replacement: Image.network(
+                  height: 200,
+                  width: 350,
+                  semanticLabel: 'Thailand',
                   'https://wallpaperaccess.com/full/150575.jpg',
                 ),
                 child: Image.asset(
                   'assets/images/demo.webp',
+                  height: 200,
+                  width: 350,
                   semanticLabel: 'Thailand',
                   fit: BoxFit.cover,
                   colorBlendMode: BlendMode.colorBurn,
