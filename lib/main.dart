@@ -1,4 +1,5 @@
 import 'package:daily_practice/first_screen.dart';
+import 'package:daily_practice/practice.dart';
 import 'package:daily_practice/routes/named_routes.dart';
 import 'package:daily_practice/second_screen.dart';
 import 'package:daily_practice/third_screen.dart';
@@ -16,15 +17,16 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData.light(),
-      initialRoute: kFirstScreen,
-      routes: {
-        kFirstScreen: (context) => FirstScreen(),
-        kSecondScreen: (context) => SecondScreen(),
-        kThirdScreen:
-            (context) => ThirdScreen(
-              randomIndex: ModalRoute.of(context)?.settings.arguments as int,
-            ),
-      },
+      // initialRoute: kFirstScreen,
+      // routes: {
+      //   kFirstScreen: (context) => FirstScreen(),
+      //   kSecondScreen: (context) => SecondScreen(),
+      //   kThirdScreen:
+      //       (context) => ThirdScreen(
+      //         randomIndex: ModalRoute.of(context)?.settings.arguments as int,
+      //       ),
+      // },
+      home: Practice(),
     );
   }
 }
