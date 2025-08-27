@@ -21,6 +21,9 @@ class _PracticeState extends State<Practice> {
               child: Visibility(
                 visible: isVisible,
                 maintainState: true,
+                replacement: Image.network(
+                  'https://wallpaperaccess.com/full/150575.jpg',
+                ),
                 child: Image.asset(
                   'assets/images/demo.webp',
                   height: 200,
@@ -31,13 +34,16 @@ class _PracticeState extends State<Practice> {
               ),
             ),
 
-            SizedBox(height: 50,),
+            SizedBox(height: 50),
 
-            ElevatedButton(onPressed: (){
-              setState(() {
-                isVisible = !(isVisible);
-              });
-            }, child: Text('Click'))
+            ElevatedButton(
+              onPressed: () {
+                setState(() {
+                  isVisible = !(isVisible);
+                });
+              },
+              child: Text('Click'),
+            ),
           ],
         ),
       ),
