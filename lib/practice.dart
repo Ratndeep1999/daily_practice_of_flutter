@@ -30,6 +30,7 @@ class _PracticeState extends State<Practice> {
                   width: 350,
                   semanticLabel: 'Thailand',
                   fit: BoxFit.cover,
+                  colorBlendMode: BlendMode.colorBurn,
                 ),
               ),
             ),
@@ -47,7 +48,7 @@ class _PracticeState extends State<Practice> {
 
             SizedBox(height: 50,),
             Image.network(
-              'https://wallpaperaccess.com/full/150575.jpg',
+              'https://wallpaperaccess.com/full/395413.jpg',
             ),
           ],
         ),
