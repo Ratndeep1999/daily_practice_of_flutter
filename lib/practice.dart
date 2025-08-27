@@ -25,6 +25,9 @@ class _PracticeState extends State<Practice> {
                   width: 350,
                   semanticLabel: 'Thailand',
                   'https://wallpaperaccess.com/full/150575.jpg',
+                  loadingBuilder: (context, child, progress) {
+                    return progress == null ? child : LinearProgressIndicator();
+                  },
                 ),
                 child: Image.asset(
                   'assets/images/demo.webp',
