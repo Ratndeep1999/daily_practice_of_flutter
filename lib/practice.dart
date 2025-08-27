@@ -7,14 +7,18 @@ class Practice extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Center(
-          child: Image.asset(
-            'assets/images/demo.webp',
-            height: 200,
-            width: 350,
-            semanticLabel: 'Thailand',
-            fit: BoxFit.cover,
-          ),
+        child: Column(
+          children: [
+            Center(
+              child: Image.asset(
+                'assets/images/demo.webp',
+                height: 200,
+                width: 350,
+                semanticLabel: 'Thailand',
+                fit: BoxFit.cover,
+              ),
+            ),
+          ],
         ),
       ),
     );
