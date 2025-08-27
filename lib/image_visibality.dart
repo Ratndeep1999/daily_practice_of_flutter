@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class Practice extends StatefulWidget {
-  const Practice({super.key});
+class ImageVisibility extends StatefulWidget {
+  const ImageVisibility({super.key});
 
   @override
-  State<Practice> createState() => _PracticeState();
+  State<ImageVisibility> createState() => ImageVisibilityState();
 }
 
-class _PracticeState extends State<Practice> {
+class ImageVisibilityState extends State<ImageVisibility> {
   bool isVisible = false;
 
   @override
