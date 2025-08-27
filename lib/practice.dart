@@ -21,9 +21,6 @@ class _PracticeState extends State<Practice> {
               child: Visibility(
                 visible: isVisible,
                 replacement: Image.network(
-                  height: 200,
-                  width: 350,
-                  semanticLabel: 'Thailand',
                   'https://wallpaperaccess.com/full/150575.jpg',
                   loadingBuilder: (context, child, progress) {
                     return progress == null ? child : LinearProgressIndicator();
@@ -31,9 +28,6 @@ class _PracticeState extends State<Practice> {
                 ),
                 child: Image.asset(
                   'assets/images/demo.webp',
-                  height: 200,
-                  width: 350,
-                  semanticLabel: 'Thailand',
                   fit: BoxFit.cover,
                   colorBlendMode: BlendMode.colorBurn,
                 ),
@@ -53,6 +47,8 @@ class _PracticeState extends State<Practice> {
 
             SizedBox(height: 50,),
             Image.network(
+              height: 200,
+              width: 350,
               'https://wallpaperaccess.com/full/395413.jpg',
               loadingBuilder: (context, child, progress) {
                 return progress == null ? child : LinearProgressIndicator();
