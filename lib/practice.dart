@@ -20,14 +20,11 @@ class _PracticeState extends State<Practice> {
             Center(
               child: Visibility(
                 visible: isVisible,
-                replacement: Text('Replace'),
-                // Image.network(
-                //   'https://wallpaperaccess.com/full/150575.jpg',
-                // ),
+                replacement: Image.network(
+                  'https://wallpaperaccess.com/full/150575.jpg',
+                ),
                 child: Image.asset(
                   'assets/images/demo.webp',
-                  height: 200,
-                  width: 350,
                   semanticLabel: 'Thailand',
                   fit: BoxFit.cover,
                   colorBlendMode: BlendMode.colorBurn,
