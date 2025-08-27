@@ -54,6 +54,9 @@ class _PracticeState extends State<Practice> {
             SizedBox(height: 50,),
             Image.network(
               'https://wallpaperaccess.com/full/395413.jpg',
+              loadingBuilder: (context, child, progress) {
+                return progress == null ? child : LinearProgressIndicator();
+              },
             ),
           ],
         ),
