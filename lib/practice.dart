@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
 
-class Practice extends StatelessWidget {
+class Practice extends StatefulWidget {
   const Practice({super.key});
+
+  @override
+  State<Practice> createState() => _PracticeState();
+}
+
+class _PracticeState extends State<Practice> {
+  bool isVisible = false;
 
   @override
   Widget build(BuildContext context) {
@@ -11,18 +18,26 @@ class Practice extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Center(
-              child: Image.asset(
-                'assets/images/demo.webp',
-                height: 200,
-                width: 350,
-                semanticLabel: 'Thailand',
-                fit: BoxFit.cover,
+              child: Visibility(
+                visible: isVisible,
+                maintainState: true,
+                child: Image.asset(
+                  'assets/images/demo.webp',
+                  height: 200,
+                  width: 350,
+                  semanticLabel: 'Thailand',
+                  fit: BoxFit.cover,
+                ),
               ),
             ),
 
             SizedBox(height: 50,),
-            
-            ElevatedButton(onPressed: (){}, child: Text('Click'))
+
+            ElevatedButton(onPressed: (){
+              setState(() {
+                isVisible = !(isVisible);
+              });
+            }, child: Text('Click'))
           ],
         ),
       ),
