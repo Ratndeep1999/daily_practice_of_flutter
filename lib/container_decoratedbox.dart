@@ -6,7 +6,7 @@ class ContainerDecoratedbox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.orange.shade100,
+      backgroundColor: Colors.purple.shade50,
       body: SafeArea(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -16,7 +16,7 @@ class ContainerDecoratedbox extends StatelessWidget {
               width: 250,
               alignment: Alignment.center,
               decoration: BoxDecoration(
-                color: Colors.greenAccent.shade100,
+                color: Colors.greenAccent.shade200,
               ),
             )
           ],)),
