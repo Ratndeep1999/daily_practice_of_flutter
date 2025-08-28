@@ -51,9 +51,27 @@ class ContainerDecoratedbox extends StatelessWidget {
                     // restrict area of shadow
                     //blurStyle: BlurStyle.inner
                     // direction of shadow 3d effect
-                    offset: Offset(0.0, 25.0)   // top-right  // bottom-left
+                    offset: Offset(40.0, 40.0)   // right  // bottom
                   ),
-                ]
+                ],
+                // shape
+                shape: BoxShape.rectangle,
+                // to add image
+                //image: DecorationImage(image: AssetImage('assets/images/demo.webp')),
+                // blur to entire parent not child
+                // backgroundBlendMode: BlendMode.colorBurn
+                gradient: LinearGradient(
+                  colors: [
+                    Colors.lightGreen,
+                    Colors.amber
+                  ],
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                  // stops: [0.0, 0.0],
+                  // gradient mix-up
+                  transform: GradientRotation(5.5),
+                  tileMode: TileMode.mirror,
+                ),
               ),
               child: Container(
                 height: 100,
@@ -70,7 +88,11 @@ class ContainerDecoratedbox extends StatelessWidget {
               ),
             ),
 
-            DecoratedBox(decoration: BoxDecoration()),
+            DecoratedBox(
+                decoration: BoxDecoration(
+
+                ),
+            ),
           ],
         ),
       ),
