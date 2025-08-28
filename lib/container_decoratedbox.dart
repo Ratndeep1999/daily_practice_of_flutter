@@ -13,18 +13,48 @@ class ContainerDecoratedbox extends StatelessWidget {
           children: [
             Container(
               // outer space
-              margin: EdgeInsets.only(left: 140, bottom: 80),
+              margin: EdgeInsets.only(left: 50, bottom: 80),
               // inner space
               padding: EdgeInsets.symmetric(horizontal: 60, vertical: 50),
               height: 250,
               width: 250,
               // pass min/max height and width
-              constraints: BoxConstraints(),
+              //constraints: BoxConstraints.tightForFinite(width: 300),
               // to align child widget
               alignment: Alignment.bottomRight,
-              // rotate the container
-              transform: Matrix4.rotationZ(0.4),
-              decoration: BoxDecoration(color: Colors.greenAccent.shade200),
+              // transform rotate the container
+              // change the position of container applicable only with transform property
+              //transformAlignment: Alignment(0.8, 0.9), // 1.vertical // 2.horizontal
+              clipBehavior: Clip.antiAliasWithSaveLayer,
+              decoration: BoxDecoration(
+                color: Colors.greenAccent.shade200,
+                // for edges circular
+                // borderRadius: BorderRadius.only(bottomLeft: Radius.circular(50)),
+                // border
+                border: Border.symmetric(
+                    vertical: BorderSide(
+                      color: Colors.red,
+                      width: 5,
+                    ),
+                    horizontal: BorderSide(
+                      color: Colors.yellowAccent,
+                      width: 3,
+                    )
+                ),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black54,
+                    // blueness
+                    blurRadius: 20.0,
+                    // area
+                    spreadRadius: 15.5,
+                    // restrict area of shadow
+                    //blurStyle: BlurStyle.inner
+                    // direction of shadow 3d effect
+                    offset: Offset(0.0, 25.0)   // top-right  // bottom-left
+                  ),
+                ]
+              ),
               child: Container(
                 height: 100,
                 width: 100,
