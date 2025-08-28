@@ -120,7 +120,9 @@ class ContainerDecoratedbox extends StatelessWidget {
                       ],
                     begin: Alignment.topLeft,
                     end: Alignment.bottomRight
-                  )
+                  ),
+                  // it put shadow first
+                  backgroundBlendMode: BlendMode.darken
                 ),
               ),
             ),
