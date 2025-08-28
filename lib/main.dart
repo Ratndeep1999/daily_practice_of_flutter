@@ -1,5 +1,5 @@
+import 'package:daily_practice/container_decoratedbox.dart';
 import 'package:daily_practice/first_screen.dart';
-import 'package:daily_practice/image_visibality.dart';
 import 'package:daily_practice/routes/named_routes.dart';
 import 'package:daily_practice/second_screen.dart';
 import 'package:daily_practice/third_screen.dart';
@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
       //         randomIndex: ModalRoute.of(context)?.settings.arguments as int,
       //       ),
       // },
-      home: ImageVisibility(),
+      home: ContainerDecoratedbox(),
     );
   }
 }
