@@ -8,18 +8,16 @@ class ContainerDecoratedbox extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.purple.shade50,
       body: SafeArea(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-            Container(
-              height: 250,
-              width: 250,
-              alignment: Alignment.center,
-              decoration: BoxDecoration(
-                color: Colors.greenAccent.shade200,
-              ),
-            )
-          ],)),
+          child: Container(
+            height: 250,
+            width: 250,
+            alignment: Alignment.center,
+            decoration: BoxDecoration(
+              color: Colors.greenAccent.shade200,
+            ),
+            child: ,
+          ),
+      ),
     );
   }
 }
