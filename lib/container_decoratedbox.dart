@@ -6,7 +6,7 @@ class ContainerDecoratedbox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.purple.shade50,
+      backgroundColor: Colors.red.shade100,
       body: SafeArea(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -88,10 +88,41 @@ class ContainerDecoratedbox extends StatelessWidget {
               ),
             ),
 
-            DecoratedBox(
-                decoration: BoxDecoration(
+            SizedBox(height: 50,),
 
+            SizedBox(
+              height: 200,
+              width: 200,
+              // only for decorated box
+              child: DecoratedBox(
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: Colors.tealAccent.shade700,
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black45,
+                      spreadRadius: 10,
+                      blurRadius: 30,
+                      offset: Offset(40.0, 50.0)
+                    ),
+                  ],
+                  border: Border.all(
+                    color: Colors.white,
+                    width: 10.0
+                  ),
+                  gradient: LinearGradient(
+                      colors: [
+                        Colors.red,
+                        Colors.deepOrange,
+                        Colors.orange,
+                        Colors.orangeAccent,
+                        Colors.yellow,
+                      ],
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight
+                  )
                 ),
+              ),
             ),
           ],
         ),
