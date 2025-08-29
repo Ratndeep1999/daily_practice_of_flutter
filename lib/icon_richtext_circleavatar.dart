@@ -52,13 +52,45 @@ class IconRichtextCircleavatar extends StatelessWidget {
             RichText(
               textAlign: TextAlign.center,
               selectionColor: Colors.white,
+              overflow: TextOverflow.ellipsis,
+              textHeightBehavior: TextHeightBehavior(
+                applyHeightToLastDescent: false,
+              ),
+              textDirection: TextDirection.rtl,
               text: TextSpan(
                 style: TextStyle(
+                  // primary scope of text style
                   color: Colors.black,
                   fontSize: 40,
-                  fontWeight: FontWeight.w500,
+                  fontWeight: FontWeight.w400,
                 ),
-                children: [TextSpan(text: 'Hello')],
+                children: [
+                  TextSpan(
+                    text: 'Hello ',
+                    // secondary scope of text style
+                    style: TextStyle(
+                      color: Colors.red,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  TextSpan(
+                    text: 'Have ',
+                    style: TextStyle(
+                      color: Colors.green,
+                      fontWeight: FontWeight.w900,
+                    ),
+                  ),
+                  TextSpan(text: 'a '),
+                  TextSpan(
+                    text: 'Good ',
+                    style: TextStyle(
+                      color: Colors.red,
+                      fontStyle: FontStyle.italic,
+                    ),
+                  ),
+                  //
+                  TextSpan(text: 'Day'),
+                ],
               ),
             ),
           ],
