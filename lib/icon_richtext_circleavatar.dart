@@ -12,20 +12,53 @@ class IconRichtextCircleavatar extends StatelessWidget {
           children: [
             Center(
               child: CircleAvatar(
-                //backgroundColor: Colors.yellowAccent,
+                backgroundColor: Colors.yellowAccent,
                 maxRadius: 130,
                 // color of child content
-                foregroundColor: Colors.red,
+                //foregroundColor: Colors.red,
                 minRadius: 50,
-                //backgroundImage: AssetImage('assets/images/demo.webp'),
+                backgroundImage: AssetImage('assets/images/demo.webp'),
                 //foregroundImage: AssetImage('assets/images/demo.webp'),
-                //child: Icon(Icons.house, size: 100),
-                backgroundImage: NetworkImage(
-                  'https://tse2.mm.bing.net/th/id/OIP.9Hsj4_O03n2vX0Bcy3-u-gHaEo?rs=1&pid=ImgDetMain&o=7&rm=3',
+                // backgroundImage: NetworkImage(
+                //    'https://tse2.mm.bing.net/th/id/OIP.9Hsj4_O03n2vX0Bcy3-u-gHaEo?rs=1&pid=ImgDetMain&o=7&rm=3',
+                //  ),
+                // onBackgroundImageError: (error, stackTrace) {
+                //   print("Image failed to load: $error");
+                // },
+                child: Icon(
+                  Icons.house,
+                  size: 100,
+                  semanticLabel: 'Home',
+                  weight: 0.5,
+                  opticalSize: 1.0,
+                  textDirection: TextDirection.rtl,
+                  fill: 0.0,
+                  color: Colors.red,
+                  //blendMode: BlendMode.darken,
+                  grade: 0.0,
+                  shadows: [
+                    Shadow(
+                      blurRadius: 10,
+                      color: Colors.black45,
+                      offset: Offset(40.5, 30.5),
+                    ),
+                  ],
                 ),
-                onBackgroundImageError: (error, stackTrace) {
-                  print("Image failed to load: $error");
-                },
+              ),
+            ),
+
+            SizedBox(height: 50),
+
+            RichText(
+              textAlign: TextAlign.center,
+              selectionColor: Colors.white,
+              text: TextSpan(
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 40,
+                  fontWeight: FontWeight.w500,
+                ),
+                children: [TextSpan(text: 'Hello')],
               ),
             ),
           ],
