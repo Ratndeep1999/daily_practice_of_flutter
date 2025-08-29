@@ -61,7 +61,7 @@ class IconRichtextCircleavatar extends StatelessWidget {
                 style: TextStyle(
                   // primary scope of text style
                   color: Colors.black,
-                  fontSize: 30,
+                  fontSize: 35,
                   fontWeight: FontWeight.w400,
                 ),
                 children: [
@@ -71,6 +71,7 @@ class IconRichtextCircleavatar extends StatelessWidget {
                     style: TextStyle(
                       color: Colors.red,
                       fontWeight: FontWeight.bold,
+                      fontSize: 40,
                     ),
                   ),
                   TextSpan(
@@ -78,6 +79,7 @@ class IconRichtextCircleavatar extends StatelessWidget {
                     style: TextStyle(
                       color: Colors.green,
                       fontWeight: FontWeight.w900,
+                      fontSize: 30,
                     ),
                   ),
                   TextSpan(text: 'a '),
