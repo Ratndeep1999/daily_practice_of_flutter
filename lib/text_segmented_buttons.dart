@@ -219,6 +219,16 @@ class _TextWidgetState extends State<TextSegmentedButtons> {
                 ],
                 onSelected: (val) {},
               ),
+
+              /// vertical divider
+              VerticalDivider(
+                color: Colors.grey,    // Divider color
+                width: 20,             // Space occupied by divider
+                thickness: 1,          // Line thickness
+                indent: 5,             // Top spacing
+                endIndent: 5,          // Bottom spacing
+              ),
+
             ],
           ),
         ),
