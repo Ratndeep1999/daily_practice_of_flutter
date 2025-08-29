@@ -61,7 +61,7 @@ class IconRichtextCircleavatar extends StatelessWidget {
                 style: TextStyle(
                   // primary scope of text style
                   color: Colors.black,
-                  fontSize: 40,
+                  fontSize: 30,
                   fontWeight: FontWeight.w400,
                 ),
                 children: [
