@@ -111,6 +111,18 @@ class _TextWidgetState extends State<TextWidget> {
                   },
                 ),
               ),
+
+              /// Segmented Buttons theme selection
+              SegmentedButton(
+                segments: [
+                  ButtonSegment(value: "light", icon: Icon(Icons.wb_sunny), label: Text("Light")),
+                  ButtonSegment(value: "dark", icon: Icon(Icons.nightlight_round), label: Text("Dark")),
+                  ButtonSegment(value: "system", icon: Icon(Icons.settings), label: Text("System")),
+                ],
+                selected: {"system"},
+                onSelectionChanged: (val) {},
+              )
+
             ],
           ),
         ),
