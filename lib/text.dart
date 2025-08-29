@@ -20,6 +20,8 @@ class TextWidget extends StatelessWidget {
                 textAlign: TextAlign.center,
                 // Whether text should wrap to the next line
                 softWrap: true,
+                // Advanced text layout (line height, spacing)
+                // strutStyle: ,
                 style: TextStyle(
                   backgroundColor: Colors.purple.shade200,
                   fontSize: 30,
