@@ -11,7 +11,7 @@ class _TextWidgetState extends State<TextSegmentedButtons> {
   String _selected = "Home";
   Set<String> _selected2 = {"Music"};
 
-  bool _isExpanded = false; // Track expanded/collapsed
+  bool _isExpanded = true; // Track expanded/collapsed
   final String _text =
       'Flutter is an amazing framework for building beautiful, natively compiled applications '
       'for mobile, web, and desktop from a single codebase. It allows developers to write once and '
