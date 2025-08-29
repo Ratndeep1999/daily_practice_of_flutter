@@ -121,7 +121,19 @@ class _TextWidgetState extends State<TextWidget> {
                 ],
                 selected: {"system"},
                 onSelectionChanged: (val) {},
+              ),
+
+              /// Dropdown menu options
+              DropdownMenu<String>(
+                initialSelection: "Apple",
+                dropdownMenuEntries: const [
+                  DropdownMenuEntry(value: "Apple", label: "Apple"),
+                  DropdownMenuEntry(value: "Banana", label: "Banana"),
+                  DropdownMenuEntry(value: "Mango", label: "Mango"),
+                ],
+                onSelected: (val) {},
               )
+
 
             ],
           ),
