@@ -85,15 +85,16 @@ class _TextWidgetState extends State<TextWidget> {
                   fontSize: 18,
                   fontWeight: FontWeight.w500,
                   color: Colors.black87,
-                  height: 1.5, // line height
+                  height: 1.3, // space inn between two lines
                   fontStyle: FontStyle.normal,
+                  overflow: TextOverflow.ellipsis,
                 ),
 
                 // Text alignment
                 textAlign: TextAlign.justify,
 
                 // Maximum number of lines
-                maxLines: 10,
+                maxLines: 3,
 
                 // Text direction
                 textDirection: TextDirection.ltr,
