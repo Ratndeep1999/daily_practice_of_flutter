@@ -35,7 +35,7 @@ class TextWidget extends StatelessWidget {
               Text(
                 'Good Morning',
                 style: TextStyle(
-                  color: Colors.lightGreen,
+                  // color: Colors.lightGreen,
                   fontSize: 40,
                   wordSpacing: 50,
                   // decoration: TextDecoration.overline,
@@ -50,7 +50,19 @@ class TextWidget extends StatelessWidget {
                   decorationThickness: 1.5,
                   // style eof lines
                   decorationStyle: TextDecorationStyle.dashed,
-                  textBaseline: TextBaseline.ideographic,
+                  shadows: [
+                    Shadow(
+                      offset: Offset(20, 20),
+                      color: Colors.black,
+                      blurRadius: 20
+                    ),
+                  ],
+                  foreground: Paint()
+                  ..color = Colors.blueGrey
+                    // give stroke to text
+                  ..style = PaintingStyle.stroke
+                  ..strokeWidth = 2.0,
+                  // textBaseline: TextBaseline.ideographic,
                 ),
               ),
             ],
