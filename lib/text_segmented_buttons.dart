@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class TextWidget extends StatefulWidget {
-  const TextWidget({super.key});
+class TextSegmentedButtons extends StatefulWidget {
+  const TextSegmentedButtons({super.key});
 
   @override
-  State<TextWidget> createState() => _TextWidgetState();
+  State<TextSegmentedButtons> createState() => _TextWidgetState();
 }
 
-class _TextWidgetState extends State<TextWidget> {
+class _TextWidgetState extends State<TextSegmentedButtons> {
   String _selected = "Home";
   Set<String> _selected2 = {"Music"};
 
