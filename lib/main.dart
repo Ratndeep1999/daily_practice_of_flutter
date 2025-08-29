@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
       //         randomIndex: ModalRoute.of(context)?.settings.arguments as int,
       //       ),
       // },
-      home: TextWidget(),
+      home: TextSegmentedButtons(),
     );
   }
 }
