@@ -92,7 +92,7 @@ class _TextWidgetState extends State<TextSegmentedButtons> {
                     Text(
                       _text,
                       style: const TextStyle(
-                        fontSize: 16,
+                        fontSize: 15,
                         height: 1.5,
                         color: Colors.black87,
                       ),
@@ -101,7 +101,7 @@ class _TextWidgetState extends State<TextSegmentedButtons> {
                     ),
                     Align(
                       alignment: Alignment.centerRight,
-                      child: GestureDetector(
+                      child: InkWell(
                         onTap: () {
                           setState(() {
                             _isExpanded = !_isExpanded;
