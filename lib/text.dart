@@ -54,14 +54,15 @@ class TextWidget extends StatelessWidget {
                     Shadow(
                       offset: Offset(20, 20),
                       color: Colors.black,
-                      blurRadius: 20
+                      blurRadius: 20,
                     ),
                   ],
-                  foreground: Paint()
-                  ..color = Colors.blueGrey
-                    // give stroke to text
-                  ..style = PaintingStyle.stroke
-                  ..strokeWidth = 2.0,
+                  foreground:
+                      Paint()
+                        ..color = Colors.blueGrey
+                        // give stroke to text
+                        ..style = PaintingStyle.stroke
+                        ..strokeWidth = 2.0,
                   // textBaseline: TextBaseline.ideographic,
                 ),
               ),
