@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
 
-class TextWidget extends StatelessWidget {
+class TextWidget extends StatefulWidget {
   const TextWidget({super.key});
+
+  @override
+  State<TextWidget> createState() => _TextWidgetState();
+}
+
+class _TextWidgetState extends State<TextWidget> {
+  String _selected = "Home";
 
   @override
   Widget build(BuildContext context) {
@@ -64,6 +71,24 @@ class TextWidget extends StatelessWidget {
                         ..style = PaintingStyle.stroke
                         ..strokeWidth = 2.0,
                   // textBaseline: TextBaseline.ideographic,
+                ),
+              ),
+
+              SelectableText('data'),
+
+              Center(
+                child: SegmentedButton<String>(
+                  segments: const <ButtonSegment<String>>[
+                    ButtonSegment(value: "Home", icon: Icon(Icons.home), label: Text("Home")),
+                    ButtonSegment(value: "Search", icon: Icon(Icons.search), label: Text("Search")),
+                    ButtonSegment(value: "Profile", icon: Icon(Icons.person), label: Text("Profile")),
+                  ],
+                  selected: <String>{_selected},
+                  onSelectionChanged: (newSelection) {
+                    setState(() {
+                      _selected = newSelection.first;
+                    });
+                  },
                 ),
               ),
             ],
