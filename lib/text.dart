@@ -14,7 +14,9 @@ class TextWidget extends StatelessWidget {
               Text(
                 'Ratndeep',
                 selectionColor: Colors.green,
+                // Text flow (LTR/RTL)
                 textDirection: TextDirection.rtl,
+                // Aligns text (left, right, center, justify)
                 textAlign: TextAlign.center,
                 // Whether text should wrap to the next line
                 softWrap: true,
