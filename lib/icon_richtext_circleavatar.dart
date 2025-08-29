@@ -8,8 +8,17 @@ class IconRichtextCircleavatar extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              CircleAvatar()
+              Center(
+                  child: CircleAvatar(
+                    backgroundColor: Colors.yellowAccent,
+                    maxRadius: 130,
+                    // color of child content
+                    foregroundColor: Colors.red,
+                    child: Icon(Icons.house, size: 100,),
+                  )
+              )
             ],
           ),
       ),
