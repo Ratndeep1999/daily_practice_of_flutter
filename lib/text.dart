@@ -9,6 +9,7 @@ class TextWidget extends StatefulWidget {
 
 class _TextWidgetState extends State<TextWidget> {
   String _selected = "Home";
+  Set<String> _selected2 = {"Music"};
 
   @override
   Widget build(BuildContext context) {
@@ -76,7 +77,7 @@ class _TextWidgetState extends State<TextWidget> {
 
               SelectableText('data'),
 
-              /// Segmented Buttons
+              /// Segmented Buttons single selection
               Center(
                 child: SegmentedButton<String>(
                   segments: const <ButtonSegment<String>>[
@@ -92,9 +93,28 @@ class _TextWidgetState extends State<TextWidget> {
                   },
                 ),
               ),
+
+              /// Segmented Buttons multiple selection
+              Center(
+                child: SegmentedButton<String>(
+                  multiSelectionEnabled: true,
+                  segments: const [
+                    ButtonSegment(value: "Music", icon: Icon(Icons.music_note), label: Text("Music")),
+                    ButtonSegment(value: "Video", icon: Icon(Icons.movie), label: Text("Video")),
+                    ButtonSegment(value: "Photo", icon: Icon(Icons.photo), label: Text("Photo")),
+                  ],
+                  selected: _selected2,
+                  onSelectionChanged: (newSelection) {
+                    setState(() {
+                      _selected2 = newSelection;
+                    });
+                  },
+                ),
+              ),
             ],
           ),
         ),
+
       ),
     );
   }
