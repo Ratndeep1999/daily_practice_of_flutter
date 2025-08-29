@@ -27,12 +27,31 @@ class TextWidget extends StatelessWidget {
                   fontSize: 30,
                   color: Colors.deepOrange,
                   fontWeight: FontWeight.bold,
-                  letterSpacing: 8.0
+                  letterSpacing: 8.0,
+                  // Line height (multiplier of font size)
+                  height: 2.0,
                 ),
               ),
               Text(
                 'Good Morning',
-                style: TextStyle(color: Colors.lightGreen, fontSize: 40),
+                style: TextStyle(
+                  color: Colors.lightGreen,
+                  fontSize: 40,
+                  wordSpacing: 50,
+                  // decoration: TextDecoration.overline,
+                  decoration: TextDecoration.combine([
+                    TextDecoration.overline,
+                    TextDecoration.lineThrough,
+                    TextDecoration.underline,
+                  ]),
+                  // decoration line color
+                  decorationColor: Colors.amber,
+                  // thickness of lines
+                  decorationThickness: 1.5,
+                  // style eof lines
+                  decorationStyle: TextDecorationStyle.dashed,
+                  textBaseline: TextBaseline.ideographic,
+                ),
               ),
             ],
           ),
