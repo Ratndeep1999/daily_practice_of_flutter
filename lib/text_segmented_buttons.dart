@@ -107,6 +107,7 @@ class _TextWidgetState extends State<TextSegmentedButtons> {
                             _isExpanded = !_isExpanded;
                           });
                         },
+                        /// see more and arrows
                         child: Row(
                           mainAxisSize: MainAxisSize.min,
                           children: [
