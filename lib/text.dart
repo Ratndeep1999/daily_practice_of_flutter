@@ -75,41 +75,90 @@ class _TextWidgetState extends State<TextWidget> {
                 ),
               ),
 
-              SelectableText('data'),
+              SelectableText(
+                // The text content
+                'Flutter is an amazing framework for building beautiful, natively compiled applications for mobile, web, and desktop from a single codebase. '
+                    'It allows developers to write once and deploy everywhere, while maintaining high performance and flexibility.',
+
+                // Text style
+                style: const TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.w500,
+                  color: Colors.black87,
+                  height: 1.5, // line height
+                  fontStyle: FontStyle.normal,
+                ),
+
+                // Text alignment
+                textAlign: TextAlign.justify,
+
+                // Maximum number of lines
+                maxLines: 10,
+
+                // Text direction
+                textDirection: TextDirection.ltr,
+
+                // How overflow is handled
+                // When the text exceeds maxLines, show ellipsis
+                // overflow: TextOverflow.ellipsis,
+
+                // Cursor color (when text is selected)
+                cursorColor: Colors.blue,
+
+                // Whether text can be selected
+                showCursor: true,
+
+                // Whether the selection toolbar (copy/paste) shows up
+                toolbarOptions: const ToolbarOptions(copy: true, selectAll: true),
+
+                // Whether the text wraps soft line breaks
+                // Defaults to true
+                // strutStyle: StrutStyle(height: 1.5),
+
+                // Selection controls
+                enableInteractiveSelection: true,
+
+                // Text scaling
+                textScaleFactor: 1.2,
+
+                // Keyboard type if it were editable
+                // Not applicable here because SelectableText is read-only
+                // semanticsLabel can be used for accessibility
+                semanticsLabel: 'About Flutter Framework',
+
+                // Key if needed
+                key: const Key('flutter_text_key'),
+              ),
 
               /// Segmented Buttons single selection
-              Center(
-                child: SegmentedButton<String>(
-                  segments: const <ButtonSegment<String>>[
-                    ButtonSegment(value: "Home", icon: Icon(Icons.home), label: Text("Home")),
-                    ButtonSegment(value: "Search", icon: Icon(Icons.search), label: Text("Search")),
-                    ButtonSegment(value: "Profile", icon: Icon(Icons.person), label: Text("Profile")),
-                  ],
-                  selected: <String>{_selected},
-                  onSelectionChanged: (newSelection) {
-                    setState(() {
-                      _selected = newSelection.first;
-                    });
-                  },
-                ),
+              SegmentedButton<String>(
+                segments: const <ButtonSegment<String>>[
+                  ButtonSegment(value: "Home", icon: Icon(Icons.home), label: Text("Home")),
+                  ButtonSegment(value: "Search", icon: Icon(Icons.search), label: Text("Search")),
+                  ButtonSegment(value: "Profile", icon: Icon(Icons.person), label: Text("Profile")),
+                ],
+                selected: <String>{_selected},
+                onSelectionChanged: (newSelection) {
+                  setState(() {
+                    _selected = newSelection.first;
+                  });
+                },
               ),
 
               /// Segmented Buttons multiple selection
-              Center(
-                child: SegmentedButton<String>(
-                  multiSelectionEnabled: true,
-                  segments: const [
-                    ButtonSegment(value: "Music", icon: Icon(Icons.music_note), label: Text("Music")),
-                    ButtonSegment(value: "Video", icon: Icon(Icons.movie), label: Text("Video")),
-                    ButtonSegment(value: "Photo", icon: Icon(Icons.photo), label: Text("Photo")),
-                  ],
-                  selected: _selected2,
-                  onSelectionChanged: (newSelection) {
-                    setState(() {
-                      _selected2 = newSelection;
-                    });
-                  },
-                ),
+              SegmentedButton<String>(
+                multiSelectionEnabled: true,
+                segments: const [
+                  ButtonSegment(value: "Music", icon: Icon(Icons.music_note), label: Text("Music")),
+                  ButtonSegment(value: "Video", icon: Icon(Icons.movie), label: Text("Video")),
+                  ButtonSegment(value: "Photo", icon: Icon(Icons.photo), label: Text("Photo")),
+                ],
+                selected: _selected2,
+                onSelectionChanged: (newSelection) {
+                  setState(() {
+                    _selected2 = newSelection;
+                  });
+                },
               ),
 
               /// Segmented Buttons theme selection
@@ -132,8 +181,7 @@ class _TextWidgetState extends State<TextWidget> {
                   DropdownMenuEntry(value: "Mango", label: "Mango"),
                 ],
                 onSelected: (val) {},
-              )
-
+              ),
 
             ],
           ),
