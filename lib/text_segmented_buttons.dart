@@ -85,41 +85,48 @@ class _TextWidgetState extends State<TextSegmentedButtons> {
               ),
 
               /// Paragraph
-              Text(
-                _text,
-                style: const TextStyle(
-                  fontSize: 16,
-                  height: 1.5,
-                  color: Colors.black87,
-                ),
-                maxLines: _isExpanded ? 3 : 8, // show at least 3 lines
-                overflow: TextOverflow.ellipsis,
-              ),
-              Align(
-                alignment: Alignment.centerRight,
-                child: GestureDetector(
-                  onTap: () {
-                    setState(() {
-                      _isExpanded = !_isExpanded;
-                    });
-                  },
-                  child: Row(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Text(
-                        _isExpanded ? 'See more' : 'See less',
-                        style: const TextStyle(
-                          color: Colors.blueGrey,
-                          fontStyle: FontStyle.italic,
-                          fontWeight: FontWeight.bold,
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                child: Column(
+                  children: [
+                    Text(
+                      _text,
+                      style: const TextStyle(
+                        fontSize: 16,
+                        height: 1.5,
+                        color: Colors.black87,
+                      ),
+                      maxLines: _isExpanded ? 3 : 8, // show at least 3 lines
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                    Align(
+                      alignment: Alignment.centerRight,
+                      child: GestureDetector(
+                        onTap: () {
+                          setState(() {
+                            _isExpanded = !_isExpanded;
+                          });
+                        },
+                        child: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Text(
+                              _isExpanded ? 'See more' : 'See less',
+                              style: const TextStyle(
+                                color: Colors.blueGrey,
+                                fontStyle: FontStyle.italic,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            Icon(
+                              _isExpanded ? Icons.arrow_downward : Icons.arrow_upward,
+                              color: Colors.blueGrey,
+                            ),
+                          ],
                         ),
                       ),
-                      Icon(
-                        _isExpanded ? Icons.arrow_downward : Icons.arrow_upward,
-                        color: Colors.blueGrey,
-                      ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
               ),
 
