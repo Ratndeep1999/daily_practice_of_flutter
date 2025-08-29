@@ -7,21 +7,31 @@ class TextWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Column(
-          children: [
-            Text(
-              'Ratndeep',
-              style: TextStyle(
-                fontSize: 30,
-                color: Colors.deepOrange,
-                fontWeight: FontWeight.bold,
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Text(
+                'Ratndeep',
+                selectionColor: Colors.green,
+                textDirection: TextDirection.rtl,
+                textAlign: TextAlign.center,
+                // Whether text should wrap to the next line
+                softWrap: true,
+                style: TextStyle(
+                  backgroundColor: Colors.purple.shade200,
+                  fontSize: 30,
+                  color: Colors.deepOrange,
+                  fontWeight: FontWeight.bold,
+                  letterSpacing: 8.0
+                ),
               ),
-            ),
-            Text(
-              'Good Morning',
-              style: TextStyle(color: Colors.lightGreen, fontSize: 40),
-            ),
-          ],
+              Text(
+                'Good Morning',
+                style: TextStyle(color: Colors.lightGreen, fontSize: 40),
+              ),
+            ],
+          ),
         ),
       ),
     );
