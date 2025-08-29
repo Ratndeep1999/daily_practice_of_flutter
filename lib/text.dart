@@ -11,6 +11,14 @@ class _TextWidgetState extends State<TextWidget> {
   String _selected = "Home";
   Set<String> _selected2 = {"Music"};
 
+  bool _isExpanded = false; // Track expanded/collapsed
+
+  final String _text =
+      'Flutter is an amazing framework for building beautiful, natively compiled applications '
+      'for mobile, web, and desktop from a single codebase. It allows developers to write once and '
+      'deploy everywhere, while maintaining high performance and flexibility. Flutter provides rich '
+      'widgets and a modern reactive framework that makes UI development fast and enjoyable.';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,6 +27,7 @@ class _TextWidgetState extends State<TextWidget> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
+              /// Ratndeep
               Text(
                 'Ratndeep',
                 selectionColor: Colors.green,
@@ -40,6 +49,7 @@ class _TextWidgetState extends State<TextWidget> {
                   height: 2.0,
                 ),
               ),
+              /// Good Morning
               Text(
                 'Good Morning',
                 style: TextStyle(
@@ -75,68 +85,63 @@ class _TextWidgetState extends State<TextWidget> {
                 ),
               ),
 
-              SelectableText(
-                // The text content
-                'Flutter is an amazing framework for building beautiful, natively compiled applications for mobile, web, and desktop from a single codebase. '
-                    'It allows developers to write once and deploy everywhere, while maintaining high performance and flexibility.',
-
-                // Text style
+              /// Paragraph
+              Text(
+                _text,
                 style: const TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.w500,
+                  fontSize: 16,
+                  height: 1.5,
                   color: Colors.black87,
-                  height: 1.3, // space inn between two lines
-                  fontStyle: FontStyle.normal,
-                  overflow: TextOverflow.ellipsis,
                 ),
-
-                // Text alignment
-                textAlign: TextAlign.justify,
-
-                // Maximum number of lines
-                maxLines: 3,
-
-                // Text direction
-                textDirection: TextDirection.ltr,
-
-                // How overflow is handled
-                // When the text exceeds maxLines, show ellipsis
-                // overflow: TextOverflow.ellipsis,
-
-                // Cursor color (when text is selected)
-                cursorColor: Colors.blue,
-
-                // Whether text can be selected
-                showCursor: true,
-
-                // Whether the selection toolbar (copy/paste) shows up
-                toolbarOptions: const ToolbarOptions(copy: true, selectAll: true),
-
-                // Whether the text wraps soft line breaks
-                // Defaults to true
-                // strutStyle: StrutStyle(height: 1.5),
-
-                // Selection controls
-                enableInteractiveSelection: true,
-
-                // Text scaling
-                textScaleFactor: 1.2,
-
-                // Keyboard type if it were editable
-                // Not applicable here because SelectableText is read-only
-                // semanticsLabel can be used for accessibility
-                semanticsLabel: 'About Flutter Framework',
-
-                // Key if needed
-                key: const Key('flutter_text_key'),
+                maxLines: _isExpanded ? 3 : 8, // show at least 3 lines
+                overflow: TextOverflow.ellipsis,
+              ),
+              Align(
+                alignment: Alignment.centerRight,
+                child: GestureDetector(
+                  onTap: () {
+                    setState(() {
+                      _isExpanded = !_isExpanded;
+                    });
+                  },
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Text(
+                        _isExpanded ? 'See more' : 'See less',
+                        style: const TextStyle(
+                          color: Colors.blueGrey,
+                          fontStyle: FontStyle.italic,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      Icon(
+                        _isExpanded ? Icons.arrow_downward : Icons.arrow_upward,
+                        color: Colors.blueGrey,
+                      ),
+                    ],
+                  ),
+                ),
               ),
 
               /// Segmented Buttons single selection
               SegmentedButton<String>(
                 segments: const <ButtonSegment<String>>[
-                  ButtonSegment(value: "Home", icon: Icon(Icons.home), label: Text("Home")),
-                  ButtonSegment(value: "Search", icon: Icon(Icons.search), label: Text("Search")),
-                  ButtonSegment(value: "Profile", icon: Icon(Icons.person), label: Text("Profile")),
+                  ButtonSegment(
+                    value: "Home",
+                    icon: Icon(Icons.home),
+                    label: Text("Home"),
+                  ),
+                  ButtonSegment(
+                    value: "Search",
+                    icon: Icon(Icons.search),
+                    label: Text("Search"),
+                  ),
+                  ButtonSegment(
+                    value: "Profile",
+                    icon: Icon(Icons.person),
+                    label: Text("Profile"),
+                  ),
                 ],
                 selected: <String>{_selected},
                 onSelectionChanged: (newSelection) {
@@ -150,9 +155,21 @@ class _TextWidgetState extends State<TextWidget> {
               SegmentedButton<String>(
                 multiSelectionEnabled: true,
                 segments: const [
-                  ButtonSegment(value: "Music", icon: Icon(Icons.music_note), label: Text("Music")),
-                  ButtonSegment(value: "Video", icon: Icon(Icons.movie), label: Text("Video")),
-                  ButtonSegment(value: "Photo", icon: Icon(Icons.photo), label: Text("Photo")),
+                  ButtonSegment(
+                    value: "Music",
+                    icon: Icon(Icons.music_note),
+                    label: Text("Music"),
+                  ),
+                  ButtonSegment(
+                    value: "Video",
+                    icon: Icon(Icons.movie),
+                    label: Text("Video"),
+                  ),
+                  ButtonSegment(
+                    value: "Photo",
+                    icon: Icon(Icons.photo),
+                    label: Text("Photo"),
+                  ),
                 ],
                 selected: _selected2,
                 onSelectionChanged: (newSelection) {
@@ -165,9 +182,21 @@ class _TextWidgetState extends State<TextWidget> {
               /// Segmented Buttons theme selection
               SegmentedButton(
                 segments: [
-                  ButtonSegment(value: "light", icon: Icon(Icons.wb_sunny), label: Text("Light")),
-                  ButtonSegment(value: "dark", icon: Icon(Icons.nightlight_round), label: Text("Dark")),
-                  ButtonSegment(value: "system", icon: Icon(Icons.settings), label: Text("System")),
+                  ButtonSegment(
+                    value: "light",
+                    icon: Icon(Icons.wb_sunny),
+                    label: Text("Light"),
+                  ),
+                  ButtonSegment(
+                    value: "dark",
+                    icon: Icon(Icons.nightlight_round),
+                    label: Text("Dark"),
+                  ),
+                  ButtonSegment(
+                    value: "system",
+                    icon: Icon(Icons.settings),
+                    label: Text("System"),
+                  ),
                 ],
                 selected: {"system"},
                 onSelectionChanged: (val) {},
@@ -183,11 +212,9 @@ class _TextWidgetState extends State<TextWidget> {
                 ],
                 onSelected: (val) {},
               ),
-
             ],
           ),
         ),
-
       ),
     );
   }
