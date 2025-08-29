@@ -10,6 +10,14 @@ class TextWidget extends StatelessWidget {
         child: Column(
           children: [
             Text(
+              'Ratndeep',
+              style: TextStyle(
+                fontSize: 30,
+                color: Colors.deepOrange,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            Text(
               'Good Morning',
               style: TextStyle(color: Colors.lightGreen, fontSize: 40),
             ),
