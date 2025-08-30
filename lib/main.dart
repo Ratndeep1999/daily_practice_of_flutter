@@ -3,6 +3,7 @@ import 'package:daily_practice/first_screen.dart';
 import 'package:daily_practice/icon_richtext_circleavatar.dart';
 import 'package:daily_practice/routes/named_routes.dart';
 import 'package:daily_practice/second_screen.dart';
+import 'package:daily_practice/stack_positioned_align.dart';
 import 'package:daily_practice/text_segmented_buttons.dart';
 import 'package:daily_practice/third_screen.dart';
 import 'package:flutter/material.dart';
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget {
       //         randomIndex: ModalRoute.of(context)?.settings.arguments as int,
       //       ),
       // },
-      home: TextSegmentedButtons(),
+      home: StackPositionedAlign(),
     );
   }
 }
