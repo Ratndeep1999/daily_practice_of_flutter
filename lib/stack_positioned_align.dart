@@ -10,6 +10,9 @@ class StackPositionedAlign extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+
+
+
             Center(
               child: Stack(
                 //alignment: Alignment(0, 0),   // right/left  // up/down
