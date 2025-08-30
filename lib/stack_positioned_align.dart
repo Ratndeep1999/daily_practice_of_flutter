@@ -8,10 +8,19 @@ class StackPositionedAlign extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          //mainAxisAlignment: MainAxisAlignment.center,
           children: [
-
-
+            Stack(
+              children: [
+                SizedBox(
+                  height: 20,
+                  width: 200,
+                  child: DecoratedBox(
+                    decoration: BoxDecoration(color: Color(0xff00ff87)),
+                  ),
+                ),
+              ],
+            ),
 
             Center(
               child: Stack(
