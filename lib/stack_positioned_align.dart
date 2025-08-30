@@ -22,16 +22,23 @@ class StackPositionedAlign extends StatelessWidget {
                     color: Colors.purpleAccent,
                   ),
                   // this never moves
-                  Container(
-                    height: 170,
-                    width: 170,
-                    color: Colors.orange,
-                  ),
+                  Container(height: 170, width: 170, color: Colors.orange),
                   Positioned(
+                    top: 20,
+                    right: 20,
                     child: Container(
                       height: 120,
                       width: 120,
                       color: Colors.yellowAccent,
+                    ),
+                  ),
+
+                  Align(
+                    alignment: Alignment(0.5, 0.3),
+                    child: Container(
+                      height: 70,
+                      width: 70,
+                      color: Colors.green,
                     ),
                   ),
                 ],
