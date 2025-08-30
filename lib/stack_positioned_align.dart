@@ -27,10 +27,12 @@ class StackPositionedAlign extends StatelessWidget {
                     width: 170,
                     color: Colors.orange,
                   ),
-                  Container(
-                    height: 120,
-                    width: 120,
-                    color: Colors.yellowAccent,
+                  Positioned(
+                    child: Container(
+                      height: 120,
+                      width: 120,
+                      color: Colors.yellowAccent,
+                    ),
                   ),
                 ],
               ),
