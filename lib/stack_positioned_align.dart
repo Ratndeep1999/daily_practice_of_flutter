@@ -12,7 +12,9 @@ class StackPositionedAlign extends StatelessWidget {
           children: [
             Center(
               child: Stack(
-                // alignment: Alignment(0.1, 3),   // right/left  // up/down
+                //alignment: Alignment(0, 0),   // right/left  // up/down
+                alignment: Alignment.center,
+                fit: StackFit.passthrough,
                 children: [
                   Container(
                     height: 250,
@@ -20,16 +22,10 @@ class StackPositionedAlign extends StatelessWidget {
                     color: Colors.purpleAccent,
                   ),
                   // this never moves
-                  Positioned(
-                    top: 50,
-                    left: 50,
-                    right: 20,
-                    bottom: 20,
-                    child: Container(
-                      height: 170,
-                      width: 170,
-                      color: Colors.orange,
-                    ),
+                  Container(
+                    height: 170,
+                    width: 170,
+                    color: Colors.orange,
                   ),
                   Container(
                     height: 120,
