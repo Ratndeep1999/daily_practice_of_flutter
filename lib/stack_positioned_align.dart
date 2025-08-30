@@ -44,6 +44,13 @@ class StackPositionedAlign extends StatelessWidget {
                       colors: [Color(0xffe9b7ce), Color(0xffd3f3f1)],
                     ),
                     border: Border.all(color: Colors.black12, width: 0.5),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black12,
+                        blurRadius: 3,
+                        spreadRadius: 2,
+                      ),
+                    ],
                   ),
                 ),
               ),
