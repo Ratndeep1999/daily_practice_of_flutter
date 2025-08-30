@@ -41,10 +41,9 @@ class StackPositionedAlign extends StatelessWidget {
                     gradient: LinearGradient(
                       begin: Alignment.topCenter,
                       end: Alignment.bottomCenter,
-                      colors: [
-                        Color(0xffe9b7ce), Color(0xffd3f3f1)
-                      ],
+                      colors: [Color(0xffe9b7ce), Color(0xffd3f3f1)],
                     ),
+                    border: Border.all(color: Colors.black12, width: 0.5),
                   ),
                 ),
               ),
