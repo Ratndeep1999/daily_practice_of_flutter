@@ -30,7 +30,13 @@ class StackPositionedAlign extends StatelessWidget {
             SizedBox(
               height: 20,
               width: 20,
-              child: DecoratedBox(decoration: BoxDecoration()),
+              child: DecoratedBox(
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    colors: [Color(0xffe9b7ce), Color(0xffd3f3f1)],
+                  ),
+                ),
+              ),
             ),
           ],
         ),
