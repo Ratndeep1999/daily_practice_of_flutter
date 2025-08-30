@@ -6,7 +6,11 @@ class StackPositionedAlign extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(child: Container()),
+      body: SafeArea(
+        child: Container(
+
+        ),
+      ),
     );
   }
 }
