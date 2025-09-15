@@ -8,6 +8,7 @@ import 'package:daily_practice/text_segmented_buttons.dart';
 import 'package:daily_practice/third_screen.dart';
 import 'package:flutter/material.dart';
 
+import 'gradients.dart';
 import 'image_shader_text.dart';
 
 void main() {
@@ -32,7 +33,8 @@ class MyApp extends StatelessWidget {
       //       ),
       // },
       // StackPositionedAlign()
-      home: ImageShaderText(),
+      // ImageShaderText()
+      home: Gradients(),
     );
   }
 }
