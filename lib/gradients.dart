@@ -27,7 +27,7 @@ class Gradients extends StatelessWidget {
                   ),
                 ),
 
-                SizedBox(height: 20,),
+                SizedBox(height: 20),
 
                 // Container with RadialGradient
                 Container(
@@ -44,33 +44,40 @@ class Gradients extends StatelessWidget {
                   ),
                 ),
 
-                SizedBox(height: 20,),
+                SizedBox(height: 20),
 
-                // Sweep Gradient container
+                // Container with SweepGradient
                 Container(
                   height: 300,
                   width: 300,
                   decoration: BoxDecoration(
                     gradient: SweepGradient(
-                      colors: [Colors.pink, Colors.yellow, Colors.blue, Colors.pink],
+                      colors: [
+                        Colors.pink,
+                        Colors.yellow,
+                        Colors.blue,
+                        Colors.pink,
+                      ],
                       stops: [0.0, 0.3, 0.7, 1.0],
                       center: Alignment.center,
                       startAngle: 0.0,
-                      endAngle: 3.14, // Half circle
+                      endAngle: 3.14,
+                      // Half circle
                       tileMode: TileMode.clamp,
                     ),
                   ),
                 ),
 
-                SizedBox(height: 20,),
+                SizedBox(height: 20),
 
-                // Gradient foreground Text
+                // Gradient on Text
                 ShaderMask(
-                  shaderCallback: (bounds) => LinearGradient(
-                    colors: [Colors.blue, Colors.red, Colors.green],
-                    begin: Alignment.topLeft,
-                    end: Alignment.bottomRight,
-                  ).createShader(bounds),
+                  shaderCallback:
+                      (bounds) => LinearGradient(
+                        colors: [Colors.blue, Colors.red, Colors.green],
+                        begin: Alignment.topLeft,
+                        end: Alignment.bottomRight,
+                      ).createShader(bounds),
                   blendMode: BlendMode.srcIn,
                   child: Text(
                     'Flutter Shader',
@@ -82,44 +89,51 @@ class Gradients extends StatelessWidget {
                   ),
                 ),
 
-                // Gradient to Icon
+                SizedBox(height: 20),
+
+                // Gradient on Icon
                 ShaderMask(
                   shaderCallback: (Rect bounds) {
                     return RadialGradient(
                       colors: [Colors.yellow, Colors.deepOrange],
                     ).createShader(bounds);
                   },
-                  child: Icon(
-                    Icons.star,
-                    size: 150,
-                    color: Colors.white,
-                  ),
+                  child: Icon(Icons.star, size: 150, color: Colors.white),
                 ),
 
-                // Radial Gradient on images
+                SizedBox(height: 20),
+
+                // RadialGradient on images
                 ShaderMask(
-                  shaderCallback: (bounds) => RadialGradient(
-                    colors: [Colors.red, Colors.green],
-                    center: Alignment.center,
-                    radius: 0.8,
-                  ).createShader(bounds),
+                  shaderCallback:
+                      (bounds) => RadialGradient(
+                        colors: [Colors.red, Colors.green],
+                        center: Alignment.center,
+                        radius: 0.8,
+                      ).createShader(bounds),
                   blendMode: BlendMode.modulate,
                   child: Image.network(
                     "https://picsum.photos/300",
                     fit: BoxFit.cover,
                   ),
-                )
+                ),
 
+                SizedBox(height: 20),
 
-
-
-
-
-
-
-
-
-
+                Text(
+                  "Radial Gradient Shader",
+                  style: TextStyle(
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold,
+                    foreground:
+                        Paint()
+                          ..shader = RadialGradient(
+                            colors: [Colors.orange, Colors.deepPurple],
+                            center: Alignment.center,
+                            radius: 0.8,
+                          ).createShader(Rect.fromLTWH(0, 0, 300, 100)),
+                  ),
+                ),
               ],
             ),
           ),
