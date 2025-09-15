@@ -80,7 +80,24 @@ class Gradients extends StatelessWidget {
                       color: Colors.white, // must set color for ShaderMask
                     ),
                   ),
-                )
+                ),
+
+
+                // Gradient to Icon
+                ShaderMask(
+                  shaderCallback: (Rect bounds) {
+                    return RadialGradient(
+                      colors: [Colors.yellow, Colors.deepOrange],
+                    ).createShader(bounds);
+                  },
+                  child: Icon(
+                    Icons.star,
+                    size: 150,
+                    color: Colors.white,
+                  ),
+                ),
+
+                //
 
 
 
