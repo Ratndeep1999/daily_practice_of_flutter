@@ -82,7 +82,6 @@ class Gradients extends StatelessWidget {
                   ),
                 ),
 
-
                 // Gradient to Icon
                 ShaderMask(
                   shaderCallback: (Rect bounds) {
