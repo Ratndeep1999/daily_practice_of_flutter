@@ -97,7 +97,23 @@ class Gradients extends StatelessWidget {
                   ),
                 ),
 
-                //
+                // Radial Gradient on images
+                ShaderMask(
+                  shaderCallback: (bounds) => RadialGradient(
+                    colors: [Colors.red, Colors.green],
+                    center: Alignment.center,
+                    radius: 0.8,
+                  ).createShader(bounds),
+                  blendMode: BlendMode.modulate,
+                  child: Image.network(
+                    "https://picsum.photos/300",
+                    fit: BoxFit.cover,
+                  ),
+                )
+
+
+
+
 
 
 
