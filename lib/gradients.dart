@@ -65,6 +65,26 @@ class Gradients extends StatelessWidget {
                 SizedBox(height: 20,),
 
                 //
+                ShaderMask(
+                  shaderCallback: (bounds) => LinearGradient(
+                    colors: [Colors.blue, Colors.red, Colors.green],
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                  ).createShader(bounds),
+                  blendMode: BlendMode.srcIn,
+                  child: Text(
+                    'Flutter Shader',
+                    style: TextStyle(
+                      fontSize: 40,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white, // must set color for ShaderMask
+                    ),
+                  ),
+                )
+
+
+
+
 
 
 
