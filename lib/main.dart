@@ -8,6 +8,8 @@ import 'package:daily_practice/text_segmented_buttons.dart';
 import 'package:daily_practice/third_screen.dart';
 import 'package:flutter/material.dart';
 
+import 'image_shader_text.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -29,7 +31,8 @@ class MyApp extends StatelessWidget {
       //         randomIndex: ModalRoute.of(context)?.settings.arguments as int,
       //       ),
       // },
-      home: StackPositionedAlign(),
+      // StackPositionedAlign()
+      home: ImageShaderText(),
     );
   }
 }
