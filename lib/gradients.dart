@@ -10,7 +10,7 @@ class Gradients extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            // Container
+            // Container of LinearGradient
             Container(
               height: 200,
               width: 200,
@@ -25,7 +25,21 @@ class Gradients extends StatelessWidget {
               ),
             ),
 
-            //
+            // Container with RadialGradient
+            Container(
+              height: 200,
+              width: 200,
+              decoration: BoxDecoration(
+                gradient: RadialGradient(
+                  colors: [Colors.orange, Colors.deepPurple],
+                  stops: [0.3, 1.0],
+                  center: Alignment.center,
+                  radius: 0.8,
+                  tileMode: TileMode.clamp,
+                ),
+              ),
+            )
+
           ],
         ),
       ),
