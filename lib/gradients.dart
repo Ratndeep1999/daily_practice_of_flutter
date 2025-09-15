@@ -64,7 +64,7 @@ class Gradients extends StatelessWidget {
 
                 SizedBox(height: 20,),
 
-                //
+                // Gradient foreground Text
                 ShaderMask(
                   shaderCallback: (bounds) => LinearGradient(
                     colors: [Colors.blue, Colors.red, Colors.green],
