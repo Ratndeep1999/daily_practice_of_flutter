@@ -35,8 +35,8 @@ class MyApp extends StatelessWidget {
       // },
       // StackPositionedAlign()
       // ImageShaderText()
-      //   Gradients()
-      home: ShaderCircle(),
+      // ShaderCircle()
+      home: Gradients(),
     );
   }
 }

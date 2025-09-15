@@ -120,20 +120,6 @@ class Gradients extends StatelessWidget {
 
                 SizedBox(height: 20),
 
-                Text(
-                  "Radial Gradient Shader",
-                  style: TextStyle(
-                    fontSize: 30,
-                    fontWeight: FontWeight.bold,
-                    foreground:
-                        Paint()
-                          ..shader = RadialGradient(
-                            colors: [Colors.orange, Colors.deepPurple],
-                            center: Alignment.center,
-                            radius: 0.8,
-                          ).createShader(Rect.fromLTWH(0, 0, 300, 100)),
-                  ),
-                ),
               ],
             ),
           ),
