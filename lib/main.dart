@@ -9,6 +9,7 @@ import 'package:daily_practice/third_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'gradients.dart';
+import 'image_shader_canvas.dart';
 import 'image_shader_text.dart';
 
 void main() {
@@ -34,7 +35,8 @@ class MyApp extends StatelessWidget {
       // },
       // StackPositionedAlign()
       // ImageShaderText()
-      home: Gradients(),
+      //   Gradients()
+      home: ShaderCircle(),
     );
   }
 }
